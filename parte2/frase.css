@@ -7,4 +7,36 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
-
+.parole {
+  position: relative;
+}
+.parole i {
+  position: absolute;
+  white-space: nowrap;
+  visibility: hidden;
+}
+.parole i:nth-child(1) {
+  animation: animazione 3s linear infinite;
+}
+@keyframes animazione {
+  0% {
+    visibility: visible;
+  }
+  33% {
+    visibility: visible;
+  }
+  33.1% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.parole i:nth-child(2) {
+  animation: animazione 3s linear infinite;
+  animation-delay: 1s;
+}
+.parole i:nth-child(3) {
+  animation: animazione 3s linear infinite;
+  animation-delay: 2s;
+}
